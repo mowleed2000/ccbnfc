@@ -1,26 +1,60 @@
 @import "tailwindcss";
 
+@theme {
+  --color-primary-text: #15171B;
+  --color-secondary-text: #626A75;
+  --color-brand-blue: #245CF5;
+  --color-brand-blue-hover: #1748D8;
+  --color-page-bg: #FFFFFF;
+  --color-soft-surface: #F5F6F8;
+  --color-border-subtle: #E5E7EB;
+  --color-status-success: #218653;
+  --color-status-error: #C83C3C;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --primary-text: #15171B;
+  --secondary-text: #626A75;
+  --brand-blue: #245CF5;
+  --brand-blue-hover: #1748D8;
+  --page-bg: #FFFFFF;
+  --soft-surface: #F5F6F8;
+  --border-subtle: #E5E7EB;
+  --status-success: #218653;
+  --status-error: #C83C3C;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--page-bg);
+  color: var(--primary-text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
+.container-custom {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container-custom {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-custom {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+button, a {
+  transition: all 180ms ease-in-out;
+}
+
